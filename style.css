@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: red;
+    overflow: hidden;
+}
+.gamecontainer{
+    background-image: url(road.png);
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    width: 100%;
+    height: 100vh;
+} 
+
+.biker{
+    background-image: url(biker.png);
+    background-repeat: no-reapeat;
+    background-size: cover;
+    width: 233px;
+    height: 185px;
+    position: absolute;
+    bottom: 0;
+    left: 52px;
+    transition: left 0.1s ease;
+}
+  
+.obstacle1{
+     width: 150px;
+     height: 123px;
+     background-image: url(vlc.png);
+     background-size: cover;
+     width: 160px;
+     height: 120 px;
+     position: absolute;
+     bottom: 0;
+     right: 322px;
+ }
+
+
+.animateBiker{
+    animation: biker 0.9s linear;
+}
+
+@keyframes biker{
+    0%{
+        bottom: 0;
+    }
+    50%{
+        bottom: 499px;
+    }
+    75%{
+        bottom: 300;
+    }
+    100%{
+        bottom: 0;
+    }
+}
+
+
+.obstacle1Ani{
+    animation: obstacle1Ani 4s linear infinite;
+}
+
+.gameOver{
+    position: relative;
+    top: 63px;
+    font-size: 53px;
+    text-align: center;
+    visibility: hidden;
+    font-family: sans-serif;
+}
+#scoreCount{
+    color: brown;
+    font-weight: bold;
+    position: absolute;
+    right: 45px;
+    top:  31px;
+    border: 2px solid black;
+    padding: 10px;
+    font-family: sans-serif;
+
+}
+@keyframes obstacle1Ani{
+    0%{
+        left: 100vw;
+    }
+    100%{
+        left: -10vw;
+    }
+}
+
+
+
